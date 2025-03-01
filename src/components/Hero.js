@@ -37,7 +37,7 @@ const HeroEduStyle = () => {
               icon: <FiUsers className="text-purple-600 text-2xl" />,
               value: "+7000",
               label: "адамдардың пікірі",
-              position: "bottom-10 left-6",
+              position: "bottom-10 left-[-50px]",
             },
           ].map(({ icon, value, label, position }, i) => (
             <div
