@@ -10,6 +10,7 @@ import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import StatsBlock from "./components/StatsBlock";
+import LearningSystem from "./components/LearningSystem";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Header />
       <Hero />
       <StatsBlock />
+      <LearningSystem/>
       <Features />
       <Courses />
       <Teachers />
