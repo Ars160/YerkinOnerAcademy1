@@ -1,7 +1,7 @@
 import React from 'react';
-import mathImg from '../assets/images/banner.jpg';
-import physicsImg from '../assets/images/banner.jpg';
-import chemistryImg from '../assets/images/banner.jpg';
+import mathImg from '../assets/images/banner.png';
+import physicsImg from '../assets/images/banner.png';
+import chemistryImg from '../assets/images/banner.png';
 
 const Courses = () => {
   const courses = [

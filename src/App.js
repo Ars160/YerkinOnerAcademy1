@@ -9,12 +9,14 @@ import Teachers from './components/Teachers';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import StatsBlock from './components/StatsBlock';
 
 function App() {
   return (
     <>
       <Header />
       <Hero />
+      <StatsBlock/>
       <Features />
       <Courses />
       <Teachers />

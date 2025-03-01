@@ -1,59 +1,127 @@
-import React, { useState } from 'react';
-import banner from '../assets/images/banner.jpg';
-
+import React, { useState, useEffect } from 'react';
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Handle scroll effects
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="bg-white shadow-sm fixed w-full z-10">
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <img src={banner} alt="Yerkin" className="h-8 w-8" />
-          <span className="text-xl font-bold text-blue-800">YerkinOnerAcadem</span>
-        </div>
-        <nav className="hidden md:flex space-x-6">
-          <a href="#courses" className="hover:text-blue-600 transition">Курстар</a>
-          <a href="#how-it-works" className="hover:text-blue-600 transition">Оқу жүйесі</a>
-          <a href="#teachers" className="hover:text-blue-600 transition">Мұғалімдер</a>
-          <a href="#contact" className="hover:text-blue-600 transition">Байланыс</a>
+    <header className={`fixed w-full z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'py-3 bg-white/95 backdrop-blur-md shadow-sm' 
+        : 'py-4 bg-indigo-950/90 backdrop-blur-md'
+    }`}>
+      <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
+        {/* Logo */}
+        <a href="/" className="flex items-center">
+          <span className={`text-xl md:text-2xl font-bold ${isScrolled ? 'text-blue-900' : 'text-white'}`}>
+            YerkinOner<span className={isScrolled ? 'text-blue-600' : 'text-blue-300'}>Academ</span>
+          </span>
+        </a>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center space-x-8">
+          <a href="#курстар" className={`font-medium transition-colors ${isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-blue-100 hover:text-white'}`}>Курстар</a>
+          <a href="#оқу-жүйесі" className={`font-medium transition-colors ${isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-blue-100 hover:text-white'}`}>Оқу жүйесі</a>
+          <a href="#мұғалімдер" className={`font-medium transition-colors ${isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-blue-100 hover:text-white'}`}>Мұғалімдер</a>
+          <a href="#байланыс" className={`font-medium transition-colors ${isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-blue-100 hover:text-white'}`}>Байланыс</a>
         </nav>
+
+        {/* CTA Button */}
         <div className="hidden md:block">
           <a
-            href="#register"
-            className="bg-blue-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700 transition"
+            href="#тіркелу"
+            className={`
+              font-medium px-6 py-3 rounded-full transition-all
+              ${isScrolled 
+                ? 'bg-blue-600 hover:bg-blue-700 text-white' 
+                : 'bg-white hover:bg-blue-50 text-blue-800'}
+            `}
           >
-            Курска тіркелу
+            Кіру
           </a>
         </div>
+
+        {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden flex items-center px-3 py-2 border rounded text-blue-600 border-blue-600 focus:outline-none"
+          className={`md:hidden p-2 rounded-md focus:outline-none ${
+            isScrolled 
+              ? 'text-gray-700 focus:ring-2 focus:ring-blue-600/30' 
+              : 'text-white focus:ring-2 focus:ring-white/30'
+          }`}
+          aria-label="Toggle menu"
         >
-          <svg className="fill-current h-5 w-5" viewBox="0 0 20 20">
+          <svg 
+            className="w-6 h-6" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
             {isMobileMenuOpen ? (
-              <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             ) : (
-              <path d="M3 6h14M3 10h14M3 14h14" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             )}
           </svg>
         </button>
       </div>
+
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <nav className="md:hidden bg-white shadow-sm">
-          <div className="px-4 py-2 space-y-2">
-            <a href="#courses" className="block hover:text-blue-600 transition">Курстар</a>
-            <a href="#how-it-works" className="block hover:text-blue-600 transition">Оқу жүйесі</a>
-            <a href="#teachers" className="block hover:text-blue-600 transition">Мұғалімдер</a>
-            <a href="#contact" className="block hover:text-blue-600 transition">Байланыс</a>
-            <a
-              href="#register"
-              className="block bg-blue-600 text-white text-center py-2 rounded-md hover:bg-blue-700 transition"
-            >
-              Курска тіркелу
-            </a>
+        <div className={`
+          md:hidden absolute top-full left-0 w-full shadow-lg border-t animate-fade-in-down
+          ${isScrolled ? 'bg-white border-gray-100' : 'bg-indigo-950 border-indigo-900'}
+        `}>
+          <div className="container mx-auto px-4 py-4 space-y-3">
+            <a href="#курстар" className={`block px-4 py-2 rounded-lg transition ${
+              isScrolled 
+                ? 'text-gray-700 hover:bg-blue-50 hover:text-blue-600' 
+                : 'text-blue-100 hover:bg-indigo-900 hover:text-white'
+            }`}>Курстар</a>
+            <a href="#оқу-жүйесі" className={`block px-4 py-2 rounded-lg transition ${
+              isScrolled 
+                ? 'text-gray-700 hover:bg-blue-50 hover:text-blue-600' 
+                : 'text-blue-100 hover:bg-indigo-900 hover:text-white'
+            }`}>Оқу жүйесі</a>
+            <a href="#мұғалімдер" className={`block px-4 py-2 rounded-lg transition ${
+              isScrolled 
+                ? 'text-gray-700 hover:bg-blue-50 hover:text-blue-600' 
+                : 'text-blue-100 hover:bg-indigo-900 hover:text-white'
+            }`}>Мұғалімдер</a>
+            <a href="#байланыс" className={`block px-4 py-2 rounded-lg transition ${
+              isScrolled 
+                ? 'text-gray-700 hover:bg-blue-50 hover:text-blue-600' 
+                : 'text-blue-100 hover:bg-indigo-900 hover:text-white'
+            }`}>Байланыс</a>
+            <div className="px-4 pt-2 pb-1">
+              <a
+                href="#тіркелу"
+                className={`
+                  block w-full text-center font-medium py-3 rounded-full transition
+                  ${isScrolled 
+                    ? 'bg-blue-600 hover:bg-blue-700 text-white' 
+                    : 'bg-white hover:bg-blue-50 text-blue-800'}
+                `}
+              >
+                Кіру
+              </a>
+            </div>
           </div>
-        </nav>
+        </div>
       )}
     </header>
   );

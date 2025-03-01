@@ -1,6 +1,6 @@
 import React from 'react';
-import teacher1 from '../assets/images/banner.jpg';
-import teacher2 from '../assets/images/banner.jpg';
+import teacher1 from '../assets/images/banner.png';
+import teacher2 from '../assets/images/banner.png';
 
 const Teachers = () => {
   const teachersData = [
