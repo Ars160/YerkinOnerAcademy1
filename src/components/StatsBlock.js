@@ -2,55 +2,68 @@ import React from 'react';
 
 const StatsBlock = () => {
   return (
-    <section className="mt-16 py-20 bg-[#F8FAFC]">
+    <section className="py-16 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
-        {/* Сетка 2×2 на больших экранах, 1×4 на мобильных */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          
-          {/* Карточка №1: Заголовок */}
-          <div className="bg-white rounded-lg p-6 md:p-8 shadow-lg flex items-center">
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold leading-snug text-blue-900">
-              ҰБТ-ға дайындатын №1 <br />
-              білім беру орталығы
-            </h2>
-          </div>
-          
-          {/* Карточка №2: 86 000 оқушы */}
-          <div className="bg-white rounded-lg p-6 md:p-8 shadow-lg flex items-center justify-center">
-            <div className="text-center">
-              <p className="text-3xl md:text-4xl font-extrabold text-blue-900 mb-2">
+        
+        {/* Заголовок */}
+        <div className="mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight">
+            ҰБТ-ға дайындайтын<br />
+            <span className="text-blue-600">№1 білім беру орталығы</span>
+          </h2>
+        </div>
+
+        {/* Статистика с градиентным фоном */}
+        <div className="bg-gradient-to-br from-[#04016C] via-[#2C0F9B] to-[#4A16BD] 
+                        rounded-2xl shadow-xl p-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            {/* Карточка 86 000 */}
+            <div className="p-6 flex flex-col items-center">
+              <p 
+                className="text-4xl md:text-5xl font-black mb-2
+                           text-transparent bg-clip-text
+                           bg-gradient-to-r from-green-200 via-blue-200 to-purple-300
+                           drop-shadow-md hover:scale-105 transition-transform"
+              >
                 86 000
               </p>
-              <p className="text-sm md:text-base text-gray-700">
+              <p className="text-gray-200 text-center text-sm md:text-base">
                 оқушы 6 жылда
               </p>
             </div>
-          </div>
-          
-          {/* Карточка №3: 90% грант */}
-          <div className="bg-white rounded-lg p-6 md:p-8 shadow-lg flex items-center justify-center">
-            <div className="text-center">
-              <p className="text-3xl md:text-4xl font-extrabold text-blue-900 mb-2">
+
+            {/* Карточка 90% */}
+            <div className="p-6 flex flex-col items-center">
+              <p 
+                className="text-4xl md:text-5xl font-black mb-2
+                           text-transparent bg-clip-text
+                           bg-gradient-to-r from-green-200 via-blue-200 to-purple-300
+                           drop-shadow-md hover:scale-105 transition-transform"
+              >
                 90%
               </p>
-              <p className="text-sm md:text-base text-gray-700">
+              <p className="text-gray-200 text-center text-sm md:text-base">
                 түлектер грант иегерлері
               </p>
             </div>
-          </div>
-          
-          {/* Карточка №4: 140 балл */}
-          <div className="bg-white rounded-lg p-6 md:p-8 shadow-lg flex items-center justify-center">
-            <div className="text-center">
-              <p className="text-3xl md:text-4xl font-extrabold text-blue-900 mb-2">
-                140 балл
+
+            {/* Карточка 140 балл */}
+            <div className="p-6 flex flex-col items-center">
+              <p 
+                className="text-4xl md:text-5xl font-black mb-2
+                           text-transparent bg-clip-text
+                           bg-gradient-to-r from-green-200 via-blue-200 to-purple-300
+                           drop-shadow-md hover:scale-105 transition-transform"
+              >
+                140
               </p>
-              <p className="text-sm md:text-base text-gray-700">
-                иегерін шығаратын білім орталығы
+              <p className="text-gray-200 text-center text-sm md:text-base">
+                балл иегерін шығаратын білім орталығы
               </p>
             </div>
-          </div>
 
+          </div>
         </div>
       </div>
     </section>
