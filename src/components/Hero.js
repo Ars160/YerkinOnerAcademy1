@@ -28,31 +28,35 @@ const HeroEduStyle = () => {
           <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-b from-transparent to-[#4A16BD]" />
           {[
             {
-              icon: <FiAward className="text-blue-600 text-2xl" />,
+              icon: <FiAward className="text-blue-600 text-lg md:text-2xl" />,
               value: "+10000",
               label: "студент",
-              position: "top-6 right-6",
+              position: "top-2 right-2 md:top-6 md:right-6",
+              size: "w-24 p-1 md:w-40 md:p-4",
             },
             {
-              icon: <FiUsers className="text-purple-600 text-2xl" />,
+              icon: <FiUsers className="text-purple-600 text-lg md:text-2xl" />,
               value: "+7000",
               label: "адамдардың пікірі",
-              position: "bottom-10 left-[-50px]",
+              position: "bottom-4 left-2 md:bottom-10 md:left-6",
+              size: "w-24 p-1 md:w-40 md:p-4",
             },
-          ].map(({ icon, value, label, position }, i) => (
+          ].map(({ icon, value, label, position, size }, i) => (
             <div
               key={i}
-              className={`absolute ${position} bg-white shadow-md rounded-md p-4 w-40 flex items-center space-x-2 text-center`}
+              className={`absolute ${position} bg-white shadow-md rounded-md ${size} flex items-center space-x-2 text-center`}
             >
               {icon}
               <div>
-                <p className="text-sm font-semibold text-gray-800">{value}</p>
-                <p className="text-xs text-gray-500">{label}</p>
+                <p className="text-[8px] md:text-sm font-semibold text-gray-800">
+                  {value}
+                </p>
+                <p className="text-[7px] md:text-xs text-gray-500">{label}</p>
               </div>
             </div>
           ))}
-          <div className="absolute top-16 left-1 bg-white shadow-md rounded-md p-3 w-36 text-center">
-            <p className="text-xs italic text-gray-600">
+          <div className="absolute top-8 left-1 bg-white shadow-md rounded-md p-1 w-20 text-center md:top-16 md:p-3 md:w-36">
+            <p className="text-[7px] md:text-xs italic text-gray-600">
               “Қорқынышты жеңудің жолы — оны түсіну”
             </p>
           </div>

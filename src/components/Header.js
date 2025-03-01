@@ -21,7 +21,7 @@ const Header = () => {
         isScrolled ? "py-3 bg-white/95 shadow-sm" : "py-4 bg-indigo-950/90"
       )}
     >
-      <div className="container mx-auto px-4 md:px-2 lg:px-2 flex items-center justify-between">
+      <div className="container mx-auto px-4 md:px-2 lg:px-16 flex items-center justify-between">
         <a href="/" className="text-xl md:text-2xl font-bold">
           <span className={clsx(isScrolled ? "text-blue-900" : "text-white")}>
             YerkinOner
