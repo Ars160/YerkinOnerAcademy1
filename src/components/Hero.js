@@ -4,7 +4,7 @@ import { FiAward, FiUsers } from "react-icons/fi";
 
 const HeroEduStyle = () => {
   return (
-    <section className="relative bg-gradient-to-br from-[#04016C] via-[#2C0F9B] to-[#4A16BD] text-white overflow-hidden">
+    <section className="pt-10 relative bg-gradient-to-br from-[#04016C] via-[#2C0F9B] to-[#4A16BD] text-white overflow-hidden">
       {/* Декоративные элементы */}
       <div className="absolute hidden lg:block top-1/2 left-1/3 transform -translate-y-1/3 -translate-x-1/2 z-0 w-[300px] md:w-[400px] lg:w-[500px] h-[300px] md:h-[400px] lg:h-[500px] rounded-full border border-blue-400/30" />
       <div className="absolute hidden md:block top-0 right-0 z-0 opacity-30">
@@ -21,25 +21,25 @@ const HeroEduStyle = () => {
       </div>
 
       {/* Контент */}
-      <div className="relative z-10 container mx-auto px-6 sm:px-10 md:px-16 py-12 sm:py-16 grid grid-cols-1 md:grid-cols-2 items-center gap-10 flex flex-col md:flex-row-reverse">
+      <div className="relative z-10 container mx-auto px-6 sm:px-10 md:px-4 lg:px-18 py-12 sm:py-16 grid grid-cols-1 md:grid-cols-2 items-center gap-10 flex flex-col md:flex-row-reverse">
         {/* Изображение - сверху на моб. */}
         <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto flex justify-center">
           <img src={banner} alt="Hero" className="z-10 w-full object-contain" />
           <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-b from-transparent to-[#4A16BD]" />
           {[
             {
-              icon: <FiAward className="text-blue-600 text-lg md:text-2xl" />,
+              icon: <FiAward className="text-blue-600 text-lg sm:text-xl md:text-2xl lg:text-3xl" />,
               value: "+10000",
               label: "студент",
-              position: "top-2 right-2 md:top-6 md:right-6",
-              size: "w-24 p-1 md:w-40 md:p-4",
+              position: "top-2 right-1 md:right-[-20px] sm:right-[-40px] md:top-3 lg:top-4",
+              size: "w-24 sm:w-32 md:w-30 lg:w-40 p-1 sm:p-3 md:p-2 lg:p-3 ",
             },
             {
-              icon: <FiUsers className="text-purple-600 text-lg md:text-2xl" />,
+              icon: <FiUsers className="text-purple-600 text-lg sm:text-xl md:text-2xl lg:text-3xl" />,
               value: "+7000",
               label: "адамдардың пікірі",
-              position: "bottom-4 left-2 md:bottom-10 md:left-6",
-              size: "w-24 p-1 md:w-40 md:p-4",
+              position: "bottom-10 left-[-20px] sm:left-[-70px] md:bottom-10",
+              size: "w-20 sm:w-32 md:w-32 lg:w-40 p-1 sm:p-3 md:p-1 lg:p-3",
             },
           ].map(({ icon, value, label, position, size }, i) => (
             <div
@@ -48,15 +48,17 @@ const HeroEduStyle = () => {
             >
               {icon}
               <div>
-                <p className="text-[8px] md:text-sm font-semibold text-gray-800">
+                <p className="text-[8px] sm:text-sm md:text-base font-semibold text-gray-800">
                   {value}
                 </p>
-                <p className="text-[7px] md:text-xs text-gray-500">{label}</p>
+                <p className="text-[7px] sm:text-xs md:text-sm text-gray-500">
+                  {label}
+                </p>
               </div>
             </div>
           ))}
-          <div className="absolute top-8 left-1 bg-white shadow-md rounded-md p-1 w-20 text-center md:top-16 md:p-3 md:w-36">
-            <p className="text-[7px] md:text-xs italic text-gray-600">
+          <div className="absolute top-8 left-[-10px] sm:left-[-70px] md:left-[-90px] bg-white shadow-md rounded-md p-1 w-20 sm:w-36 md:w-25 lg:w-40 text-center md:top-16 md:p-0 lg:p-2">
+            <p className="text-[7px] sm:text-sm md:text-[13px] lg:text-[20px] italic text-gray-600">
               “Қорқынышты жеңудің жолы — оны түсіну”
             </p>
           </div>
