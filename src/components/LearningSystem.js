@@ -71,7 +71,7 @@ const TeachingSystemSection = () => {
   const rows = chunkArray(features, 2);
 
   return (
-    <section className="flex flex-col justify-center items-center p-20 w-full bg-white max-md:px-5 max-md:max-w-full">
+    <section className="flex flex-col justify-center items-center p-24 w-full bg-white max-md:px-5 max-md:max-w-full">
       <div className="flex flex-col w-full max-w-[1231px] max-md:max-w-full mx-auto">
       <div className="mb-12 text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 leading-tight">

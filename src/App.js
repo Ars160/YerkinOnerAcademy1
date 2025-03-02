@@ -19,8 +19,8 @@ function App() {
       <Hero />
       <StatsBlock />
       <LearningSystem/>
-      <Features />
       <Courses />
+      <Features />
       <Teachers />
       <Testimonials />
       <Contact />
