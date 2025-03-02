@@ -1,53 +1,94 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    age: '',
+  });
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    setFormData({ name: '', phone: '', age: '' });
+  };
+
   return (
-    <section id="contact" className="py-16 bg-blue-900 text-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Байланыс</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <p className="mb-2"><strong>Телефон:</strong> +7 (700) 123-45-67</p>
-            <p className="mb-2"><strong>Email:</strong> info@juz40.kz</p>
-            <p className="mb-2"><strong>Мекенжай:</strong> Нұр-Сұлтан, Қабанбай батыр, 53</p>
-            <p className="mb-8">Жұмыс уақыты: 09:00 - 18:00 (Дс - Жм)</p>
+    <section className="relative bg-gradient-to-br from-[#04016C] via-[#2C0F9B] to-[#4A16BD] py-16 md:py-20 overflow-hidden">
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-3xl mx-auto text-white">
+          <div className="mb-10 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+              Дәл қазір тіркеліңіз
+            </h2>
+            <p className="text-lg md:text-xl text-gray-100/90">
+              Форманы толтырсаңыз, біздің менеджер сізге жақын арада хабарласады
+            </p>
+            <div className="h-1 w-20 bg-[#70f7ff] rounded-full mt-5"></div>
           </div>
-          <div className="bg-white text-gray-800 p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-bold mb-4">Хабарласыңыз</h3>
-            <form className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block mb-1 font-medium">Аты-жөні</label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
-                  placeholder="Атыңыз"
-                />
+
+          <div className="bg-white rounded-xl shadow-2xl p-1 text-gray-800">
+            <form onSubmit={handleSubmit} className="p-6 md:p-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                <div className="md:col-span-1">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                    Есіміңіз
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2C0F9B] focus:border-transparent transition"
+                    placeholder="Аты-жөніңіз"
+                    required
+                  />
+                </div>
+
+                <div className="md:col-span-1">
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                    Телефон
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2C0F9B] focus:border-transparent transition"
+                    placeholder="+7 (999) 999-99-99"
+                    required
+                  />
+                </div>
+
+                <div className="md:col-span-1">
+                  <label htmlFor="age" className="block text-sm font-medium text-gray-700 mb-1">
+                    Жасыңыз
+                  </label>
+                  <input
+                    type="number"
+                    id="age"
+                    value={formData.age}
+                    onChange={handleChange}
+                    className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2C0F9B] focus:border-transparent transition"
+                    placeholder="Жасыңызды енгізіңіз"
+                    required
+                  />
+                </div>
               </div>
-              <div>
-                <label htmlFor="phone" className="block mb-1 font-medium">Телефон</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
-                  placeholder="+7 (___) ___-__-__"
-                />
+
+              <div className="mt-6 md:mt-8 flex justify-end">
+                <button
+                  type="submit"
+                  className="w-full md:w-auto bg-[#2C0F9B] hover:bg-[#3714c0] text-white font-medium py-3 px-8 rounded-lg transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#2C0F9B]"
+                >
+                  Тіркелемін
+                </button>
               </div>
-              <div>
-                <label htmlFor="message" className="block mb-1 font-medium">Хабарлама</label>
-                <textarea
-                  id="message"
-                  className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
-                  placeholder="Сұрағыңызды жазыңыз..."
-                  rows={4}
-                />
-              </div>
-              <button
-                type="submit"
-                className="bg-blue-800 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transition"
-              >
-                Жіберу
-              </button>
             </form>
           </div>
         </div>
