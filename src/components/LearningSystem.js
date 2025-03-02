@@ -1,88 +1,117 @@
 import React from 'react';
-// Замените на свои реальные файлы (иконки/фото)
-import platformImg from '../assets/images/live.png';
-import liveImg from '../assets/images/live.png';
-import testImg from '../assets/images/live.png';
-import analysisImg from '../assets/images/kurator.png';
-import curatorImg from '../assets/images/kurator.png';
-import supportImg from '../assets/images/kurator.png';
+import FeatureCard from './FeatureCard';
 
-const LearningSystem = () => {
-  const cards = [
+// Импортируйте свои локальные фото
+import liveImg from '../assets/images/live.png';
+import curatorImg from '../assets/images/kurator.png';
+
+const TeachingSystemSection = () => {
+  const features = [
     {
       id: 1,
+      backgroundImage:
+        'bg-gradient-to-br from-[#04016C] via-[#2C0F9B] to-[#4A16BD]',
       title: 'Платформа',
-      description: 'Интерактивті платформада сабақтарды кез келген уақытта қарау',
-      img: platformImg,
+      description: 'Ыңғайлы платформада сабақтарды кез келген уақытта қарау',
+      image: liveImg,
     },
     {
       id: 2,
+      backgroundImage:
+        'bg-gradient-to-br from-[#04016C] via-[#2C0F9B] to-[#4A16BD]',
       title: 'Тікелей эфир',
       description: 'Әр пәннен аптасына екі рет тікелей эфирге қатысу',
-      img: liveImg,
+      image: liveImg,
     },
     {
       id: 3,
+      backgroundImage:
+        'bg-gradient-to-br from-[#04016C] via-[#2C0F9B] to-[#4A16BD]',
       title: 'Байқау тест',
-      description: 'Апта сайын ҰБТ-да келетін сұрақтарды сараптау арқылы...',
-      img: testImg,
+      description:
+        'Апта сайын ҰБТ-да келетін сұрақтарды арнайы сабақта талдау',
+      image: liveImg,
     },
     {
       id: 4,
+      backgroundImage:
+        'bg-gradient-to-br from-[#04016C] via-[#2C0F9B] to-[#4A16BD]',
       title: 'Нұсқа талдау',
-      description: 'ҰБТ-да келетін сұрақтарды тақырыптық талдау',
-      img: analysisImg,
+      description:
+        'Апта сайын ҰБТ-да келетін сұрақтарды талдайтын арнайы сабақ',
+      image: curatorImg,
     },
     {
       id: 5,
+      backgroundImage:
+        'bg-gradient-to-br from-[#04016C] via-[#2C0F9B] to-[#4A16BD]',
       title: 'Куратор',
-      description: 'Куратор әр оқушының үлгерімін қадағалап, қолдау көрсетеді',
-      img: curatorImg,
+      description: 'Әр оқушыны қадағалайтын жеке куратордың болуы',
+      image: curatorImg,
     },
     {
       id: 6,
+      backgroundImage:
+        'bg-gradient-to-br from-[#04016C] via-[#2C0F9B] to-[#4A16BD]',
       title: 'Қолдау',
-      description: 'Сабақ барысында туындаған кез келген сұраққа жедел жауап',
-      img: supportImg,
+      description: 'Оқушыларға техникалық қолдау көрсету',
+      image: curatorImg,
     },
   ];
 
+  // Функция для разбивки массива на группы по 2
+  const chunkArray = (array, size = 2) => {
+    const result = [];
+    for (let i = 0; i < array.length; i += size) {
+      result.push(array.slice(i, i + size));
+    }
+    return result;
+  };
+
+  const rows = chunkArray(features, 2);
+
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        
-        {/* Заголовок секции */}
-        <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-8 text-center">
-          Оқыту жүйесі
-        </h2>
+    <section className="flex flex-col justify-center items-center p-20 w-full bg-white max-md:px-5 max-md:max-w-full">
+      <div className="flex flex-col w-full max-w-[1231px] max-md:max-w-full mx-auto">
+      <div className="mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 leading-tight">
+            Оқыту жүйесі
+          </h2>
+        </div>
 
-        {/* Сетка карточек (2 столбца на больших экранах) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {cards.map((card) => (
-            <div
-              key={card.id}
-              className="flex items-center bg-[#0F2F4D] text-white rounded-lg shadow-md p-6 space-x-4"
-            >
-              {/* Иконка / картинка слева */}
-              <img
-                src={card.img}
-                alt={card.title}
-                className="w-16 h-16 object-contain flex-shrink-0"
-              />
+        {rows.map((pair, rowIndex) => {
+          const isEvenRow = rowIndex % 2 === 0;
+          const leftWidth = isEvenRow ? "w-[45%]" : "w-[55%]";
+          const rightWidth = isEvenRow ? "w-[55%]" : "w-[45%]";
 
-              {/* Текстовая часть */}
-              <div>
-                <h3 className="text-xl font-semibold">{card.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed">
-                  {card.description}
-                </p>
+          return (
+            <div className="mt-5 max-md:max-w-full" key={rowIndex}>
+              <div className="flex gap-5 max-md:flex-col">
+                <div className={`${leftWidth} max-md:w-full border border-gray-300 rounded-xl p-4 shadow-md`}>
+                  <FeatureCard
+                    backgroundImage={pair[0].backgroundImage}
+                    title={pair[0].title}
+                    description={pair[0].description}
+                    image={pair[0].image}
+                  />
+                </div>
+                {pair[1] && (
+                  <div className={`${rightWidth} max-md:w-full border border-gray-300 rounded-xl p-4 shadow-md`}>
+                    <FeatureCard
+                      backgroundImage={pair[1].backgroundImage}
+                      title={pair[1].title}
+                      description={pair[1].description}
+                      image={pair[1].image}
+                    />
+                  </div>
+                )}
               </div>
             </div>
-          ))}
-        </div>
+          );
+        })}
       </div>
     </section>
   );
 };
 
-export default LearningSystem;
+export default TeachingSystemSection;

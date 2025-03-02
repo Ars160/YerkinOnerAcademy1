@@ -2,7 +2,7 @@ import React from "react";
 
 const StatsBlock = () => {
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-gray-50">
+    <section className="pt-16 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         {/* Заголовок */}
         <div className="mb-12 text-center">
