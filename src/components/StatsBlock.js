@@ -7,7 +7,7 @@ const StatsBlock = () => {
         {/* Заголовок */}
         <div className="mb-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight">
-            ҰБТ-ға дайындайтын
+            Жетісу облысындағы
             <br />
             <span className="text-blue-60 ">№1 білім беру орталығы</span>
           </h2>
@@ -27,10 +27,10 @@ const StatsBlock = () => {
                            bg-gradient-to-r from-green-200 via-blue-200 to-purple-300
                            drop-shadow-md hover:scale-105 transition-transform"
               >
-                86 000
+                18 000
               </p>
               <p className="text-gray-200 text-center text-sm md:text-base">
-                оқушы 6 жылда
+                оқушы 11 жылда
               </p>
             </div>
 
@@ -45,7 +45,7 @@ const StatsBlock = () => {
                 90%
               </p>
               <p className="text-gray-200 text-center text-sm md:text-base">
-                түлектер грант иегерлері
+                республика жүлдегерлері
               </p>
             </div>
 
@@ -57,10 +57,10 @@ const StatsBlock = () => {
                            bg-gradient-to-r from-green-200 via-blue-200 to-purple-300
                            drop-shadow-md hover:scale-105 transition-transform"
               >
-                140
+                №1
               </p>
               <p className="text-gray-200 text-center text-sm md:text-base">
-                балл иегерін шығаратын білім орталығы
+                алғашқылардың бірі бол
               </p>
             </div>
           </div>

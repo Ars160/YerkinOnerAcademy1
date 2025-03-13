@@ -28,14 +28,19 @@ const HeroEduStyle = () => {
           <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-b from-transparent to-[#4A16BD]" />
           {[
             {
-              icon: <FiAward className="text-blue-600 text-lg sm:text-xl md:text-2xl lg:text-3xl" />,
+              icon: (
+                <FiAward className="text-blue-600 text-lg sm:text-xl md:text-2xl lg:text-3xl" />
+              ),
               value: "+10000",
               label: "студент",
-              position: "top-2 right-1 md:right-[-20px] sm:right-[-40px] md:top-3 lg:top-4",
+              position:
+                "top-2 right-1 md:right-[-20px] sm:right-[-40px] md:top-3 lg:top-4",
               size: "w-24 sm:w-32 md:w-30 lg:w-40 p-1 sm:p-3 md:p-2 lg:p-3 ",
             },
             {
-              icon: <FiUsers className="text-purple-600 text-lg sm:text-xl md:text-2xl lg:text-3xl" />,
+              icon: (
+                <FiUsers className="text-purple-600 text-lg sm:text-xl md:text-2xl lg:text-3xl" />
+              ),
               value: "+7000",
               label: "адамдардың пікірі",
               position: "bottom-10 left-[-20px] sm:left-[-70px] md:bottom-10",
@@ -67,7 +72,7 @@ const HeroEduStyle = () => {
         {/* Текст - снизу на моб. и слева на больших экранах */}
         <div className="space-y-6 text-center md:text-left order-last md:order-first">
           <h1 className="font-extrabold leading-tight mt-10">
-            {["Еркін сөйле", "Еркің ойла", "Еркін бол!"].map((text, i) => (
+            {["Еркін сөйле", "Еркін ойла", "Еркін бол!"].map((text, i) => (
               <span
                 key={i}
                 className="block text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-green-200 via-blue-200 to-purple-300"
@@ -77,8 +82,8 @@ const HeroEduStyle = () => {
             ))}
           </h1>
           <p className="text-base md:text-lg text-gray-100 max-w-xl leading-relaxed mx-auto md:mx-0">
-            Біздің курстарымыз сізге дебат әлемінде сенімді сөйлеу мен дұрыс
-            ойлау дағдыларын үйретеді.
+            Біздің курстарымыз сізге дебат әлемінде сенімді сөйлеу мен
+            критикалық ойлау дағдыларын үйретеді.
             <br />
             <p className="mt-4">
               Қазақстанның ең үздік университеттерінің тәжірибелі мамандарынан

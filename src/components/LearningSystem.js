@@ -1,48 +1,49 @@
-import React from 'react';
+import React from "react";
 // Замените на свои реальные файлы (иконки/фото)
-import platformImg from '../assets/images/live.png';
-import liveImg from '../assets/images/live.png';
-import testImg from '../assets/images/live.png';
-import analysisImg from '../assets/images/kurator.png';
-import curatorImg from '../assets/images/kurator.png';
-import supportImg from '../assets/images/kurator.png';
+import platformImg from "../assets/images/live.png";
+import liveImg from "../assets/images/live.png";
+import testImg from "../assets/images/live.png";
+import analysisImg from "../assets/images/kurator.png";
+import curatorImg from "../assets/images/kurator.png";
+import supportImg from "../assets/images/kurator.png";
 
 const LearningSystem = () => {
   const cards = [
     {
       id: 1,
-      title: 'Платформа',
-      description: 'Интерактивті платформада сабақтарды кез келген уақытта қарау',
+      title: "Платформа",
+      description:
+        "Интерактивті платформада сабақтарды кез келген уақытта қарау",
       img: platformImg,
     },
     {
       id: 2,
-      title: 'Тікелей эфир',
-      description: 'Әр пәннен аптасына екі рет тікелей эфирге қатысу',
+      title: "Тікелей эфир",
+      description: "Әр сабақтан  аптасына екі рет тікелей эфирге қатысу",
       img: liveImg,
     },
     {
       id: 3,
-      title: 'Байқау тест',
-      description: 'Апта сайын ҰБТ-да келетін сұрақтарды сараптау арқылы...',
+      title: "Көрініс қарар",
+      description: "Апта сайын көрініс қарар анализдеу",
       img: testImg,
     },
     {
       id: 4,
-      title: 'Нұсқа талдау',
-      description: 'ҰБТ-да келетін сұрақтарды тақырыптық талдау',
+      title: "Спикерлермен кездесу",
+      description: "Атақты тұлғалармен кездесу(блогер,актер,журналист)",
       img: analysisImg,
     },
     {
       id: 5,
-      title: 'Куратор',
-      description: 'Куратор әр оқушының үлгерімін қадағалап, қолдау көрсетеді',
+      title: "Куратор",
+      description: "Куратор әр студентің үлгерімін қадағалап, қолдау көрсетеді",
       img: curatorImg,
     },
     {
       id: 6,
-      title: 'Қолдау',
-      description: 'Сабақ барысында туындаған кез келген сұраққа жедел жауап',
+      title: "Қолдау",
+      description: "Сабақ барысында туындаған кез келген сұраққа жедел жауап",
       img: supportImg,
     },
   ];
@@ -50,7 +51,6 @@ const LearningSystem = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        
         {/* Заголовок секции */}
         <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-8 text-center">
           Оқыту жүйесі

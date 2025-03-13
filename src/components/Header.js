@@ -26,7 +26,7 @@ const Header = () => {
           <span className={clsx(isScrolled ? "text-blue-900" : "text-white")}>
             YerkinOner
             <span className={isScrolled ? "text-blue-600" : "text-blue-300"}>
-              Academ
+              Academy
             </span>
           </span>
         </a>
