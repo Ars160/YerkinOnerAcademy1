@@ -7,11 +7,7 @@ const StatsBlock = () => {
         {/* Заголовок */}
         <div className="mb-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight">
-<<<<<<< HEAD
             Жетісу облысындағы
-=======
-          Жетісу облысындағы
->>>>>>> 2c5c5ec (updated text and images)
             <br />
             <span className="text-blue-60 ">№1 білім беру орталығы</span>
           </h2>

@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <Header />
-      <Hero />
+       <Hero />
       <StatsBlock />
       <LearningSystem/>
       <Courses id="курстар"/>
