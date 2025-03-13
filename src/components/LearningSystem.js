@@ -59,7 +59,7 @@ const TeachingSystemSection = () => {
       backgroundImage:
         'bg-gradient-to-br from-[#04016C] via-[#2C0F9B] to-[#4A16BD]',
       title: 'Платформа',
-      description: 'Ыңғайлы платформада сабақтарды кез келген уақытта қарау',
+      description: 'Интерактивті платформада сабақтарды кез келген уақытта қарау',
       image: liveImg,
     },
     {
@@ -74,18 +74,18 @@ const TeachingSystemSection = () => {
       id: 3,
       backgroundImage:
         'bg-gradient-to-br from-[#04016C] via-[#2C0F9B] to-[#4A16BD]',
-      title: 'Байқау тест',
+      title: 'Көрініс қарар',
       description:
-        'Апта сайын ҰБТ-да келетін сұрақтарды арнайы сабақта талдау',
+        'Апта сайын көрініс қарар анализдеу',
       image: liveImg,
     },
     {
       id: 4,
       backgroundImage:
         'bg-gradient-to-br from-[#04016C] via-[#2C0F9B] to-[#4A16BD]',
-      title: 'Нұсқа талдау',
+      title: 'Спикерлермен кездесу',
       description:
-        'Апта сайын ҰБТ-да келетін сұрақтарды талдайтын арнайы сабақ',
+        'Атақты тұлғалармен кездесу(блогер,актер,журналист)',
       image: curatorImg,
     },
     {
@@ -93,7 +93,7 @@ const TeachingSystemSection = () => {
       backgroundImage:
         'bg-gradient-to-br from-[#04016C] via-[#2C0F9B] to-[#4A16BD]',
       title: 'Куратор',
-      description: 'Әр оқушыны қадағалайтын жеке куратордың болуы',
+      description: 'Куратор әр студентің үлгерімін қадағалап, қолдау көрсетеді',
       image: curatorImg,
     },
     {
@@ -101,7 +101,7 @@ const TeachingSystemSection = () => {
       backgroundImage:
         'bg-gradient-to-br from-[#04016C] via-[#2C0F9B] to-[#4A16BD]',
       title: 'Қолдау',
-      description: 'Оқушыларға техникалық қолдау көрсету',
+      description: 'Сабақ барысында туындаған кез келген сұраққа жедел жауап',
       image: curatorImg,
 >>>>>>> a88b603cd32c6602fcbe1b91c0876380e8dc5823
     },

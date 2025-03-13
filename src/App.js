@@ -20,7 +20,7 @@ function App() {
       <Hero />
       <StatsBlock />
       <LearningSystem/>
-      <Courses />
+      <Courses id="курстар"/>
       <Features />
       <TeacherShowcase/>
       <Testimonials />
