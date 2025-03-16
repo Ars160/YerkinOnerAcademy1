@@ -53,6 +53,7 @@ const TeachingSystemSection = () => {
     },
   ];
 
+  // Функция для разбивки массива на группы по 2 элемента
   const chunkArray = (array, size = 2) => {
     const result = [];
     for (let i = 0; i < array.length; i += size) {
@@ -64,11 +65,13 @@ const TeachingSystemSection = () => {
   const rows = chunkArray(features, 2);
 
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-8 text-center">
-          Оқыту жүйесі
-        </h2>
+    <section className="flex flex-col justify-center items-center p-24 w-full bg-white max-md:px-5 max-md:max-w-full">
+      <div className="flex flex-col w-full max-w-[1231px] max-md:max-w-full mx-auto">
+        <div className="mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 leading-tight">
+            Оқыту жүйесі
+          </h2>
+        </div>
 
         {rows.map((pair, rowIndex) => {
           const isEvenRow = rowIndex % 2 === 0;
@@ -80,19 +83,19 @@ const TeachingSystemSection = () => {
               <div className="flex gap-5 max-md:flex-col">
                 <div className={`${leftWidth} max-md:w-full border border-gray-300 rounded-xl p-4 shadow-md`}>
                   <FeatureCard
-                    backgroundImage={pair[0].backgroundImage || ""}
+                    backgroundImage={pair[0].backgroundImage}
                     title={pair[0].title}
                     description={pair[0].description}
-                    image={pair[0].img} 
+                    img={pair[0].img}
                   />
                 </div>
                 {pair[1] && (
                   <div className={`${rightWidth} max-md:w-full border border-gray-300 rounded-xl p-4 shadow-md`}>
                     <FeatureCard
-                      backgroundImage={pair[1].backgroundImage || ""}
+                      backgroundImage={pair[1].backgroundImage}
                       title={pair[1].title}
                       description={pair[1].description}
-                      image={pair[1].img} 
+                      img={pair[1].img}
                     />
                   </div>
                 )}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FeatureCard = ({ backgroundImage = "", title, description, image }) => {
+const FeatureCard = ({ backgroundImage = "", title, description, img }) => {
   const isGradient = backgroundImage.startsWith('bg-gradient');
 
   const style = isGradient
@@ -33,7 +33,7 @@ const FeatureCard = ({ backgroundImage = "", title, description, image }) => {
 
         <div className="w-1/2 md:w-1/3">
           <img
-            src={image}
+            src={img}
             alt={title || 'Feature illustration'}
             className="object-contain w-full h-auto"
           />
