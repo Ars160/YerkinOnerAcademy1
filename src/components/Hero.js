@@ -22,10 +22,12 @@ const HeroEduStyle = () => {
 
       {/* Контент */}
       <div className="relative z-10 container mx-auto px-6 sm:px-10 md:px-4 lg:px-18 py-12 sm:py-16 grid grid-cols-1 md:grid-cols-2 items-center gap-10 flex flex-col md:flex-row-reverse">
-        {/* Изображение - сверху на моб. */}
+        {/* Изображение */}
         <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto flex justify-center">
           <img src={banner} alt="Hero" className="z-10 w-full object-contain" />
           <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-b from-transparent to-[#4A16BD]" />
+
+          {/* Карточки (иконки + текст) поверх баннера */}
           {[
             {
               icon: (
@@ -62,6 +64,8 @@ const HeroEduStyle = () => {
               </div>
             </div>
           ))}
+
+          {/* Небольшая цитата */}
           <div className="absolute top-8 left-[-10px] sm:left-[-70px] md:left-[-90px] bg-white shadow-md rounded-md p-1 w-20 sm:w-36 md:w-25 lg:w-40 text-center md:top-16 md:p-0 lg:p-2">
             <p className="text-[7px] sm:text-sm md:text-[13px] lg:text-[20px] italic text-gray-600">
               “Қорқынышты жеңудің жолы — оны түсіну”
@@ -69,7 +73,7 @@ const HeroEduStyle = () => {
           </div>
         </div>
 
-        {/* Текст - снизу на моб. и слева на больших экранах */}
+        {/* Текст */}
         <div className="space-y-6 text-center md:text-left order-last md:order-first">
           <h1 className="font-extrabold leading-tight mt-10">
             {["Еркін сөйле", "Еркін ойла", "Еркін бол!"].map((text, i) => (
@@ -81,18 +85,22 @@ const HeroEduStyle = () => {
               </span>
             ))}
           </h1>
+
           <p className="text-base md:text-lg text-gray-100 max-w-xl leading-relaxed mx-auto md:mx-0">
             Біздің курстарымыз сізге дебат әлемінде сенімді сөйлеу мен
             критикалық ойлау дағдыларын үйретеді.
             <br />
-            <p className="mt-4">
+            <span className="mt-4 block">
               Қазақстанның ең үздік университеттерінің тәжірибелі мамандарынан
               дәріс алыңыз.
-            </p>
+            </span>
           </p>
+
           <div className="flex justify-center md:justify-start">
             <a
-              href="#consultation"
+              href="https://wa.me/77714629004?text=Сәлем!%20Толық%20ақпарат%20алғым%20келеді."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-white hover:bg-gray-100 transition text-indigo-700 font-semibold rounded-md py-3 px-8 md:py-4 md:px-12 lg:py-5 lg:px-16 text-base md:text-lg"
             >
               Толық ақпарат алу
