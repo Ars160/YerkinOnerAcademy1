@@ -2,38 +2,58 @@
 
 import React from "react";
 import TeacherCard from "./TeacherCard";
-import teacherImg from "../assets/images/kurator.png"; // Для примера одна и та же картинка
+import img1 from "../assets/images/IMG_2381.png";
+import img2 from "../assets/images/IMG_0599.PNG";
+import img3 from "../assets/images/img3.png";
+import img4 from "../assets/images/img4.png";
+import img5 from "../assets/images/img5.PNG";
+import img6 from "../assets/images/img6.png";
+
 
 const TeacherShowcase = () => {
   // ОДИН массив с учителями
   const teachers = [
     {
-      image: teacherImg,
-      subject: "Математика",
-      name: "Нұрдәулет Құлахмет",
+      image: img1,
+      subject: "Дебат және Ораторлық өнер",
+      name: "Ержан Дәулетбаев",
       students: "8500+ оқушы",
-      experience: "тәжірибесі: 4 жыл",
+      experience: "тәжірибесі: 11 жыл",
     },
     {
-      image: teacherImg,
-      subject: "Химия",
-      name: "Сансызбаева Жанар",
-      students: "10000 оқушы",
-      experience: "тәжірибесі: 8 жыл",
+      image: img2,
+      subject: "Дебат",
+      name: "Орманова Еркежан",
+      students: "2530 оқушы",
+      experience: "тәжірибесі: 6 жыл",
     },
     {
-      image: teacherImg,
-      subject: "Дүниежүзі тарихы",
-      name: "Ізгілік Бекслан",
-      students: "10000 оқушы",
-      experience: "тәжірибесі: 5 жыл",
+      image: img3,
+      subject: "Дебат",
+      name: "Омархан Мейрамбек",
+      students: "1900+ оқушы",
+      experience: "тәжірибесі: 7 жыл",
     },
     {
-      image: teacherImg,
-      subject: "Биология",
-      name: "Рахмет Айтуған",
+      image: img4,
+      subject: "Дебат",
+      name: "Байбол Жанбол",
       students: "3000 оқушы",
-      experience: "тәжірибесі: 3 жыл",
+      experience: "тәжірибесі: 7 жыл",
+    },
+    {
+      image: img5,
+      subject: "Дебат",
+      name: "Мекзам Нұржан",
+      students: "1853 оқушы",
+      experience: "тәжірибесі: 6 жыл",
+    },
+    {
+      image: img6,
+      subject: "Дебат",
+      name: "Назым Мұратқызы",
+      students: "3446 оқушы",
+      experience: "тәжірибесі: 8 жыл",
     },
   ];
 
@@ -48,7 +68,7 @@ const TeacherShowcase = () => {
           Сетка из 4 колонок на больших экранах и 1 колонка на маленьких (max-md). 
           Можно менять grid-cols-4 на grid-cols-3, если нужно другое количество колонок.
         */}
-        <div className="grid grid-cols-4 gap-5 mt-20 max-md:grid-cols-1">
+        <div className="grid grid-cols-3 gap-5 mt-20 max-md:grid-cols-1">
           {teachers.map((teacher, index) => (
             <TeacherCard
               key={index}

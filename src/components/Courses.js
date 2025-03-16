@@ -1,6 +1,6 @@
 import React from 'react';
 import mathImg from '../assets/images/banner.png';
-import yershan from '../assets/images/Yershan.jpeg';
+import yershan from '../assets/images/IMG_2381.png';
 import chemistryImg from '../assets/images/kurator.png';
 
 const Courses = () => {

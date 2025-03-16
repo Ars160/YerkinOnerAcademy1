@@ -1,34 +1,35 @@
 import React from "react";
 import TestimonialCard from "./TestimonialsCard";
-import mathImg from '../assets/images/banner.png';
+import mathImg from '../assets/images/image1.jpg';
+import img3 from '../assets/images/icon.jpg';
 
 
 const testimonials = [
   {
     id: 1,
-    name: "Ronald Richards",
+    name: "Арсен Орынбас",
     imageSrc:
       mathImg,
     testimonial:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "Мен дебат және ораторлық өнер курсын өткеннен кейін кез келген ортада өз ойымды еркін әрі сенімді жеткізуге дағдыландым. Жаттығулар өте қызықты, ал тәжірибелі тәлімгерлер менің қабілетімді ашуға көмектесті. Қазір әртүрлі шараларда сөз сөйлеуден еш қорықпаймын!",
     className: "pb-32",
   },
   {
     id: 2,
-    name: "Wade Warren",
+    name: "Әділет Тұрар",
     imageSrc:
       mathImg,
     testimonial:
-      "Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Reprehenderit in voluptate velit esse.",
+      "Бұл курс ораторлық өнерімнің ғана емес, логикалық ойлауымның да дамуына зор ықпал етті. Практикалық тапсырмалар мен пікірталастар арқылы өзімнің көшбасшылық қабілетімді жетілдірдім. Енді кез келген аудиторияны баурап алу мен үшін оңай!",
     className: "pb-36",
   },
   {
     id: 3,
-    name: "Jacob Jones",
+    name: "Айгерім Еркін",
     imageSrc:
-      mathImg,
+      img3,
     testimonial:
-      "Esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit.",
+      "Дебат және ораторлық өнер курсы – өзімді жан-жақты дамытудың таптырмас мүмкіндігі болды. Оқу барысында айтқан сөзімнің мәнін нақты жеткізуді, дауыс ырғағын дұрыс қолдануды және тыңдаушылармен байланыс орнатуды үйрендім. Енді маңызды іс-шараларда сөйлеуге сенімдімін.",
     className: "pb-40",
   },
 ];
