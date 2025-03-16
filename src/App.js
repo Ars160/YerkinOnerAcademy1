@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <Header />
-      {/* <main>
+      <main>
         <Hero />
         <StatsBlock />
         <section id="курстар">
@@ -35,7 +35,7 @@ function App() {
         <section id="байланыс">
           <Contact />
         </section>
-      </main> */}
+      </main>
       <Footer />
     </>
   );
