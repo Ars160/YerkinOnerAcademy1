@@ -17,15 +17,25 @@ function App() {
   return (
     <>
       <Header />
-       <Hero />
-      <StatsBlock />
-      <LearningSystem/>
-      <Courses id="курстар"/>
-      <Features />
-      <TeacherShowcase/>
-      <Testimonials />
-      <BestStudents/>
-      <Contact />
+      <main>
+        <Hero />
+        <StatsBlock />
+        <section id="курстар">
+          <Courses />
+        </section>
+        <section id="оқу жүйесі">
+          <LearningSystem />
+        </section>
+        <section id="мұғалімдер">
+          <TeacherShowcase />
+        </section>
+        <Features />
+        <Testimonials />
+        <BestStudents />
+        <section id="байланыс">
+          <Contact />
+        </section>
+      </main>
       <Footer />
     </>
   );

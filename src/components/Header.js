@@ -1,7 +1,8 @@
+// src/components/Header.jsx
 import React, { useState, useEffect, useCallback } from "react";
 import clsx from "clsx";
 
-const Header = () => {
+function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -14,6 +15,17 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
 
+  const handleNavClick = (sectionId) => {
+    if (isMobileMenuOpen) setIsMobileMenuOpen(false);
+
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const navItems = ["Курстар", "Оқу жүйесі", "Мұғалімдер", "Байланыс"];
+
   return (
     <header
       className={clsx(
@@ -22,6 +34,7 @@ const Header = () => {
       )}
     >
       <div className="container mx-auto px-4 sm:px-12 md:px-2 lg:px-4 flex items-center justify-between">
+        {/* Логотип */}
         <a href="/" className="text-xl md:text-2xl font-bold">
           <span className={clsx(isScrolled ? "text-blue-900" : "text-white")}>
             YerkinOner
@@ -31,25 +44,25 @@ const Header = () => {
           </span>
         </a>
 
-        {/* Desktop Navigation */}
+        {/* Навигация (Desktop) */}
         <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
-          {["Курстар", "Оқу жүйесі", "Мұғалімдер", "Байланыс"].map((item) => (
-            <a
+          {navItems.map((item) => (
+            <button
               key={item}
-              href={`#${item.toLowerCase()}`}
+              onClick={() => handleNavClick(item.toLowerCase())}
               className={clsx(
-                "font-medium transition-colors",
+                "font-medium transition-colors focus:outline-none",
                 isScrolled
                   ? "text-gray-700 hover:text-blue-600"
                   : "text-blue-100 hover:text-white"
               )}
             >
               {item}
-            </a>
+            </button>
           ))}
         </nav>
 
-        {/* CTA Button */}
+        {/* Кнопка "Тіркелу" (CTA) */}
         <a
           href="#тіркелу"
           className={clsx(
@@ -62,7 +75,7 @@ const Header = () => {
           Тіркелу
         </a>
 
-        {/* Mobile Menu Button */}
+        {/* Кнопка мобильного меню */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className={clsx(
@@ -98,7 +111,7 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Мобильное меню */}
       {isMobileMenuOpen && (
         <div
           className={clsx(
@@ -109,19 +122,19 @@ const Header = () => {
           )}
         >
           <div className="container mx-auto px-4 py-4 space-y-3 w-full text-center">
-            {["Курстар", "Оқу жүйесі", "Мұғалімдер", "Байланыс"].map((item) => (
-              <a
+            {navItems.map((item) => (
+              <button
                 key={item}
-                href={`#${item.toLowerCase()}`}
+                onClick={() => handleNavClick(item.toLowerCase())}
                 className={clsx(
-                  "block px-4 py-2 rounded-lg transition",
+                  "block px-4 py-2 rounded-lg transition focus:outline-none",
                   isScrolled
                     ? "text-gray-700 hover:bg-blue-50 hover:text-blue-600"
                     : "text-blue-100 hover:bg-indigo-900 hover:text-white"
                 )}
               >
                 {item}
-              </a>
+              </button>
             ))}
             <div className="px-4 pt-2 pb-1">
               <a
@@ -141,6 +154,6 @@ const Header = () => {
       )}
     </header>
   );
-};
+}
 
 export default Header;
