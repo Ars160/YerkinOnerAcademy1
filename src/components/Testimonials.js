@@ -16,7 +16,7 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Әділет Тұрар",
+    name: "Әлібек Мұрат",
     imageSrc:
       mathImg,
     testimonial:
