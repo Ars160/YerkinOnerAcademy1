@@ -62,9 +62,8 @@ function Header() {
           ))}
         </nav>
 
-        {/* Кнопка "Тіркелу" (CTA) */}
-        <a
-          href="#тіркелу"
+        <button
+          onClick={() => handleNavClick("байланыс")}
           className={clsx(
             "hidden md:block font-medium px-6 py-3 rounded-full transition-all",
             isScrolled
@@ -73,7 +72,7 @@ function Header() {
           )}
         >
           Тіркелу
-        </a>
+        </button>
 
         {/* Кнопка мобильного меню */}
         <button
@@ -137,8 +136,9 @@ function Header() {
               </button>
             ))}
             <div className="px-4 pt-2 pb-1">
-              <a
-                href="#тіркелу"
+              {/* Кнопка "Тіркелу" (CTA) для мобильного меню */}
+              <button
+                onClick={() => handleNavClick("тіркелу")}
                 className={clsx(
                   "block w-full text-center font-medium py-3 rounded-full transition",
                   isScrolled
@@ -146,8 +146,8 @@ function Header() {
                     : "bg-white hover:bg-blue-50 text-blue-800"
                 )}
               >
-                Кіру
-              </a>
+                Тіркелу
+              </button>
             </div>
           </div>
         </div>
