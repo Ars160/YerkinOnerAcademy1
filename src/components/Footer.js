@@ -1,50 +1,90 @@
-import React from 'react';
-import { FaInstagram, FaWhatsapp, FaTelegram, FaYoutube, FaTiktok } from 'react-icons/fa';
+import React from "react";
+import {
+  FaInstagram,
+  FaWhatsapp,
+  FaTelegram,
+  FaYoutube,
+  FaTiktok,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-[#04016C] via-[#2C0F9B] to-[#4A16BD] text-white py-8">
+    <footer className="bg-gradient-to-br from-[#04016C] via-[#2C0F9B] to-[#4A16BD] text-white py-10">
       <div className="container mx-auto px-4">
         {/* Top section with logo and info */}
-        <div className="flex flex-col md:flex-row justify-between items-start mb-6">
-          <div className="mb-6 md:mb-0">
-            <div className="text-2xl font-bold mb-2">YerkinOnerAcademy</div>
-            <p className="text-sm mb-1">©Барлық құқықтар қорғалған</p>
-            <p className="text-sm mb-1">+7 747 140 14 04</p>
-            <p className="text-sm mb-1">Алматы қаласы, микрорайон Мирас, 65</p>
+        <div className="flex flex-col md:flex-row justify-between items-center mb-6">
+          <div className="mb-6 md:mb-0 text-center md:text-left">
+            <div className="text-3xl font-semibold mb-3">YerkinOnerAcademy</div>
+            <p className="text-sm mb-2">Ormanovva@gmail.com</p>
+            <p className="text-sm mb-2">+7 771 462 9004</p>
+            <p className="text-sm mb-2">Талдықорған қаласы, Абылайхана 221</p>
           </div>
-          
+
           {/* Social Media and Links */}
-          <div className="flex flex-col md:items-end">
-            <div className="flex space-x-4 mb-4">
-              <a href="https://instagram.com/juzo" target="_blank" rel="noopener noreferrer" className="hover:text-teal-300 transition" aria-label="Instagram">
-                <FaInstagram size={24} />
+          <div className="flex flex-col md:items-center space-y-4 items-center">
+            <div className="flex space-x-6 mb-4">
+              <a
+                href="https://instagram.com/juzo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-teal-300 transition transform hover:scale-110"
+                aria-label="Instagram"
+              >
+                <FaInstagram size={28} />
               </a>
-              <a href="https://wa.me/77471401404" target="_blank" rel="noopener noreferrer" className="hover:text-teal-300 transition" aria-label="WhatsApp">
-                <FaWhatsapp size={24} />
+              <a
+                href="https://wa.me/77471401404"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-teal-300 transition transform hover:scale-110"
+                aria-label="WhatsApp"
+              >
+                <FaWhatsapp size={28} />
               </a>
-              <a href="https://t.me/juzo" target="_blank" rel="noopener noreferrer" className="hover:text-teal-300 transition" aria-label="Telegram">
-                <FaTelegram size={24} />
+              <a
+                href="https://t.me/juzo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-teal-300 transition transform hover:scale-110"
+                aria-label="Telegram"
+              >
+                <FaTelegram size={28} />
               </a>
-              <a href="https://tiktok.com/@juzo" target="_blank" rel="noopener noreferrer" className="hover:text-teal-300 transition" aria-label="TikTok">
-                <FaTiktok size={24} />
+              <a
+                href="https://tiktok.com/@juzo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-teal-300 transition transform hover:scale-110"
+                aria-label="TikTok"
+              >
+                <FaTiktok size={28} />
               </a>
-              <a href="https://youtube.com/juzo" target="_blank" rel="noopener noreferrer" className="hover:text-teal-300 transition" aria-label="YouTube">
-                <FaYoutube size={24} />
+              <a
+                href="https://youtube.com/juzo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-teal-300 transition transform hover:scale-110"
+                aria-label="YouTube"
+              >
+                <FaYoutube size={28} />
               </a>
             </div>
             <div className="space-y-2">
-              <a href="/privacy" className="block hover:text-teal-300 transition">
-                Құпиялылық саясаты
+              <a
+                href="/privacy"
+                className="block text-sm hover:text-teal-300 transition"
+              >
+                Біздің желілер
               </a>
             </div>
           </div>
         </div>
-        
+
         {/* Bottom copyright */}
-        <div className="border-t border-indigo-700 pt-4">
+        <div className="border-t border-indigo-700 pt-4 mt-6">
           <p className="text-center text-sm">
-            © {new Date().getFullYear()} YerkinOnerAcademy. Барлық құқықтар қорғалған.
+            © {new Date().getFullYear()} YerkinOnerAcademy. Барлық құқықтар
+            қорғалған.
           </p>
         </div>
       </div>
