@@ -3,7 +3,17 @@ import mathImg from "../assets/images/banner.png";
 import yershan from "../assets/images/IMG_2381.png";
 import chemistryImg from "../assets/images/kurator.png";
 
+
 const Courses = () => {
+
+    const handleNavClick = (sectionId) => {
+  
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+  
   const courses = [
     {
       title: "Ораторлық өнер",
@@ -58,12 +68,13 @@ const Courses = () => {
                 <p className="text-gray-600 mt-2 leading-relaxed">
                   {course.desc}
                 </p>
-                <a
-                  href="#register"
-                  className="inline-block mt-5 bg-indigo-600 text-white font-medium py-3 px-6 rounded-full hover:bg-indigo-700 transition duration-300 shadow-md"
-                >
-                  Тіркелу
-                </a>
+                <button
+  onClick={() => handleNavClick("байланыс")}
+   className="inline-block mt-5 bg-indigo-600 text-white font-medium py-3 px-6 rounded-full hover:bg-indigo-700 transition duration-300 shadow-md"
+>
+  Тіркелу
+</button>
+
               </div>
             </div>
           ))}
