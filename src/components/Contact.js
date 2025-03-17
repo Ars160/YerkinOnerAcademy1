@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    age: '',
+    name: "",
+    phone: "",
+    age: "",
   });
 
   const handleChange = (e) => {
@@ -14,8 +14,20 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', phone: '', age: '' });
+
+    // Формирование сообщения для WhatsApp
+    const message = `Есіміңіз: ${formData.name}\nТелефон: ${formData.phone}\nЖасыңыз: ${formData.age}`;
+
+    // WhatsApp ссылка с заполненным сообщением
+    const whatsappUrl = `https://wa.me/77714629004?text=${encodeURIComponent(
+      message
+    )}`;
+
+    // Перенаправляем пользователя на WhatsApp
+    window.open(whatsappUrl, "_blank");
+
+    // Очищаем форму после отправки
+    setFormData({ name: "", phone: "", age: "" });
   };
 
   return (
@@ -36,7 +48,10 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="p-6 md:p-8">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                 <div className="md:col-span-1">
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
                     Есіміңіз
                   </label>
                   <input
@@ -51,7 +66,10 @@ const Contact = () => {
                 </div>
 
                 <div className="md:col-span-1">
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
                     Телефон
                   </label>
                   <input
@@ -66,7 +84,10 @@ const Contact = () => {
                 </div>
 
                 <div className="md:col-span-1">
-                  <label htmlFor="age" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label
+                    htmlFor="age"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
                     Жасыңыз
                   </label>
                   <input
