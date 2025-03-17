@@ -2,6 +2,7 @@ import React from "react";
 import TestimonialCard from "./TestimonialsCard";
 import mathImg from '../assets/images/image1.jpg';
 import img3 from '../assets/images/icon.jpg';
+import img2 from '../assets/images/image2.jpg';
 
 
 const testimonials = [
@@ -16,9 +17,9 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Әлібек Мұрат",
+    name: "Айдос Мұрат",
     imageSrc:
-      mathImg,
+      img2,
     testimonial:
       "Бұл курс ораторлық өнерімнің ғана емес, логикалық ойлауымның да дамуына зор ықпал етті. Практикалық тапсырмалар мен пікірталастар арқылы өзімнің көшбасшылық қабілетімді жетілдірдім. Енді кез келген аудиторияны баурап алу мен үшін оңай!",
     className: "pb-36",
