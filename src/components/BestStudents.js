@@ -18,9 +18,9 @@ const BestStudents = () => {
   const students = [
     {
       id: 1,
-      name: 'Елдесбек Жаннур',
-      subject: 'Математика',
-      score: '140 балл',
+      name: 'Еркежан Арқашқызы',
+      subject: 'Дебат',
+      score: '2020',
       desc: 'Сұхбаттасу: Демография...',
       image: images1,
     },
