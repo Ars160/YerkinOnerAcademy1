@@ -43,7 +43,7 @@ const Courses = () => {
           Курстар
         </h2>
         <p className="mt-3 text-lg text-gray-300 max-md:text-base">
-          Біздің ең танымал бағыттар
+          Біздің №1 тәлімгерлерімен
         </p>
 
         {/* Сетка карточек */}
