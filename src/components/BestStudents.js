@@ -1,5 +1,13 @@
 import React, { useRef, useState, useEffect } from 'react';
-import mathImg from '../assets/images/banner.png';
+import images1 from '../assets/images/images1.PNG';
+import images2 from '../assets/images/images2.PNG';
+import images3 from '../assets/images/images3.PNG';
+import images4 from '../assets/images/images4.PNG';
+import images5 from '../assets/images/images5.PNG';
+import images6 from '../assets/images/images6.PNG';
+import images7 from '../assets/images/images7.PNG';
+import images8 from '../assets/images/images8.PNG';
+import images9 from '../assets/images/images9.PNG';
 
 const BestStudents = () => {
   const scrollContainerRef = useRef(null);
@@ -14,7 +22,7 @@ const BestStudents = () => {
       subject: 'Математика',
       score: '140 балл',
       desc: 'Сұхбаттасу: Демография...',
-      image: mathImg,
+      image: images1,
     },
     {
       id: 2,
@@ -22,7 +30,7 @@ const BestStudents = () => {
       subject: 'Физика',
       score: '139 балл',
       desc: 'Сұхбаттасу: Деформация...',
-      image: mathImg,
+      image: images2,
     },
     {
       id: 3,
@@ -30,7 +38,7 @@ const BestStudents = () => {
       subject: 'Дүниежүзі тарихы',
       score: '136 балл',
       desc: 'Сұхбаттасу: Демография...',
-      image: mathImg,
+      image: images3,
     },
     {
       id: 4,
@@ -38,7 +46,7 @@ const BestStudents = () => {
       subject: 'Химия',
       score: '137 балл',
       desc: 'Сұхбаттасу: Термодинамика...',
-      image: mathImg,
+      image: images4,
     },
     {
       id: 5,
@@ -46,7 +54,7 @@ const BestStudents = () => {
       subject: 'Геометрия',
       score: '135 балл',
       desc: 'Сұхбаттасу: Үшбұрыштар...',
-      image: mathImg,
+      image: images5,
     },
     {
       id: 6,
@@ -54,7 +62,7 @@ const BestStudents = () => {
       subject: 'Физика',
       score: '139 балл',
       desc: 'Сұхбаттасу: Деформация...',
-      image: mathImg,
+      image: images6,
     },
     {
       id: 7,
@@ -62,7 +70,7 @@ const BestStudents = () => {
       subject: 'Химия',
       score: '137 балл',
       desc: 'Сұхбаттасу: Термодинамика...',
-      image: mathImg,
+      image: images7,
     },
     {
       id: 8,
@@ -70,7 +78,15 @@ const BestStudents = () => {
       subject: 'Геометрия',
       score: '135 балл',
       desc: 'Сұхбаттасу: Үшбұрыштар...',
-      image: mathImg,
+      image: images8,
+    },
+    {
+      id: 9,
+      name: 'Тыныбекова Ерна',
+      subject: 'Геометрия',
+      score: '135 балл',
+      desc: 'Сұхбаттасу: Үшбұрыштар...',
+      image: images9,
     },
   ];
 
@@ -116,11 +132,8 @@ const BestStudents = () => {
         {/* Heading */}
         <div className="mb-12">
           <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold text-indigo-900 mb-4">
-            Біздің үздіктер
+            Біздің түлектер
           </h2>
-          <p className="text-center text-gray-600 max-w-2xl mx-auto">
-            ҰБТ-да ең жоғары балл жинаған оқушылар
-          </p>
         </div>
 
         {/* Wrapper with navigation and gradients */}
