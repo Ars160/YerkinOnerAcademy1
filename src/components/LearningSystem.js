@@ -1,10 +1,10 @@
 import React from "react";
-import platformImg from "../assets/images/live.png";
-import liveImg from "../assets/images/live.png";
-import testImg from "../assets/images/live.png";
-import analysisImg from "../assets/images/kurator.png";
-import curatorImg from "../assets/images/kurator.png";
-import supportImg from "../assets/images/kurator.png";
+import platformImg from "../assets/images/platform.png";
+import liveImg from "../assets/images/tv.png";
+import testImg from "../assets/images/karar.png";
+import analysisImg from "../assets/images/spiker.png";
+import curatorImg from "../assets/images/kurator1.png";
+import supportImg from "../assets/images/support.png";
 import FeatureCard from "./FeatureCard";
 
 const TeachingSystemSection = () => {
