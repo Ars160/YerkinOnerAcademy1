@@ -59,11 +59,11 @@ const TeacherShowcase = () => {
     <section className="flex flex-col items-center px-8 py-24 w-full bg-gradient-to-br from-[#04016C] via-[#2C0F9B] to-[#4A16BD] text-white max-md:px-5">
       <div className="w-full max-w-6xl text-center">
         <h1 className="text-6xl font-extrabold leading-tight tracking-wide max-md:text-4xl">
-          Грантқа жеткізетін <br />{" "}
-          <span className="text-yellow-400">үздік мұғалімдер</span>
+          Шыңға жеткізетін <br />{" "}
+          <span className="text-yellow-400">үздік тәлімгерлер</span>
         </h1>
         <p className="mt-6 text-xl text-gray-200 max-md:text-lg">
-          Бізбен бірге оқып, ең үздік мұғалімдерден білім алыңыз.
+          Бізбен бірге оқып, ең үздік тәлімгерлерден білім алыңыз.
         </p>
       </div>
 

@@ -3,7 +3,6 @@ import {
   FaInstagram,
   FaWhatsapp,
   FaTelegram,
-  FaYoutube,
   FaTiktok,
 } from "react-icons/fa";
 
@@ -24,7 +23,7 @@ const Footer = () => {
           <div className="flex flex-col md:items-center space-y-4 items-center">
             <div className="flex space-x-6 mb-4">
               <a
-                href="https://instagram.com/juzo"
+                href="https://instagram.com/yerkin_oner_academy/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-teal-300 transition transform hover:scale-110"
@@ -33,7 +32,7 @@ const Footer = () => {
                 <FaInstagram size={28} />
               </a>
               <a
-                href="https://wa.me/77471401404"
+                href="https://wa.me/77714629004"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-teal-300 transition transform hover:scale-110"
@@ -42,7 +41,7 @@ const Footer = () => {
                 <FaWhatsapp size={28} />
               </a>
               <a
-                href="https://t.me/juzo"
+                href="https://t.me/77714629004"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-teal-300 transition transform hover:scale-110"
@@ -51,22 +50,13 @@ const Footer = () => {
                 <FaTelegram size={28} />
               </a>
               <a
-                href="https://tiktok.com/@juzo"
+                href="https://wa.me/77714629004"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-teal-300 transition transform hover:scale-110"
                 aria-label="TikTok"
               >
                 <FaTiktok size={28} />
-              </a>
-              <a
-                href="https://youtube.com/juzo"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-teal-300 transition transform hover:scale-110"
-                aria-label="YouTube"
-              >
-                <FaYoutube size={28} />
               </a>
             </div>
             <div className="space-y-2">
