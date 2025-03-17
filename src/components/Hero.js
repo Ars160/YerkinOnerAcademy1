@@ -21,7 +21,7 @@ const HeroEduStyle = () => {
       </div>
 
       {/* Контент */}
-      <div className="relative z-10 container mx-auto px-6 sm:px-10 md:px-4 lg:px-18 py-12 sm:py-16 grid grid-cols-1 md:grid-cols-2 items-center gap-10 flex flex-col md:flex-row-reverse">
+      <div className="relative z-10 container mx-auto px-6 sm:px-10 md:px-4 lg:px-16 py-12 sm:py-16 grid grid-cols-1 md:grid-cols-2 items-center gap-10 flex flex-col md:flex-row-reverse">
         {/* Изображение */}
         <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto flex justify-center">
           <img src={banner} alt="Hero" className="z-10 w-full object-contain" />
