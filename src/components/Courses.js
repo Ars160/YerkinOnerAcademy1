@@ -1,7 +1,7 @@
-import React from 'react';
-import mathImg from '../assets/images/banner.png';
-import yershan from '../assets/images/IMG_2381.png';
-import chemistryImg from '../assets/images/kurator.png';
+import React from "react";
+import mathImg from "../assets/images/banner.png";
+import yershan from "../assets/images/IMG_2381.png";
+import chemistryImg from "../assets/images/kurator.png";
 
 const Courses = () => {
   const courses = [
@@ -25,44 +25,42 @@ const Courses = () => {
   return (
     <section
       id="courses"
-      className="py-16 bg-gradient-to-br from-[#04016C] via-[#2C0F9B] to-[#4A16BD]"
+      className="py-20 bg-gradient-to-br from-[#04016C] via-[#2C0F9B] to-[#4A16BD] text-white"
     >
-      <div className="container mx-auto px-4">
-        {/* Заголовок и подзаголовок */}
-        <div className="mb-12 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white">
-            Курстар
-          </h2>
-          <p className="text-white mt-2">
-            Біздің ең танымал бағыттар
-          </p>
-        </div>
+      <div className="container mx-auto px-6 text-center">
+        {/* Заголовок */}
+        <h2 className="text-5xl font-extrabold tracking-wide max-md:text-4xl">
+          Курстар
+        </h2>
+        <p className="mt-3 text-lg text-gray-300 max-md:text-base">
+          Біздің ең танымал бағыттар
+        </p>
 
         {/* Сетка карточек */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-14">
           {courses.map((course, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-1 transition duration-300"
+              className="bg-white text-gray-900 rounded-3xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden"
             >
               {/* Картинка сверху */}
               <img
-              src={course.img}
-              alt={course.title}
-              className="w-full h-auto max-h-64 object-contain rounded-t-lg"
+                src={course.img}
+                alt={course.title}
+                className="w-full h-60 object-cover rounded-t-3xl"
               />
 
               {/* Текстовое описание */}
-              <div className="p-5">
-                <h3 className="text-2xl font-semibold mb-3 text-blue-800">
+              <div className="p-6 text-center">
+                <h3 className="text-2xl font-semibold text-indigo-800">
                   {course.title}
                 </h3>
-                <p className="text-gray-700 mb-4">
+                <p className="text-gray-600 mt-2 leading-relaxed">
                   {course.desc}
                 </p>
                 <a
                   href="#register"
-                  className="inline-block bg-indigo-600 text-white font-medium py-2 px-5 rounded-md hover:bg-indigo-700 transition-colors"
+                  className="inline-block mt-5 bg-indigo-600 text-white font-medium py-3 px-6 rounded-full hover:bg-indigo-700 transition duration-300 shadow-md"
                 >
                   Тіркелу
                 </a>
