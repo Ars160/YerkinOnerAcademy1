@@ -21,53 +21,50 @@ const HeroEduStyle = () => {
       </div>
 
       {/* Контент */}
-      <div className="relative z-10 container mx-auto px-6 sm:px-10 md:px-4 lg:px-16 py-12 sm:py-16 grid grid-cols-1 md:grid-cols-2 items-center gap-10 flex flex-col md:flex-row-reverse">
+      <div className="relative z-10 container mx-auto px-6 sm:px-8 md:px-5 py-12 sm:py-16 grid grid-cols-1 md:grid-cols-2 items-center gap-10 flex flex-col md:flex-row-reverse">
         {/* Изображение */}
         <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto flex justify-center">
           <img src={banner} alt="Hero" className="z-10 w-full object-contain" />
           <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-b from-transparent to-[#4A16BD]" />
 
-          {/* Карточки (иконки + текст) поверх баннера */}
+          {/* Карточки */}
           {[
             {
               icon: (
-                <FiAward className="text-blue-600 text-lg sm:text-xl md:text-2xl lg:text-3xl" />
+                <FiAward className="text-blue-600 mr-2 text-xl sm:text-2xl md:text-3xl" />
               ),
               value: "+10000",
               label: "студент",
               position:
-                "top-2 right-1 md:right-[-20px] sm:right-[-40px] md:top-3 lg:top-4",
+                "top-2 right-[-15px] md:right-[-5px] md:top-[-4px] sm:right-[-40px] md:top-3 lg:top-4",
               size: "w-24 sm:w-32 md:w-30 lg:w-40 p-1 sm:p-3 md:p-2 lg:p-3 ",
             },
             {
-              icon: (
-                <FiUsers className="text-purple-600 text-lg sm:text-xl md:text-2xl lg:text-3xl" />
-              ),
               value: "+7000",
               label: "адамдардың пікірі",
-              position: "bottom-10 left-[-20px] sm:left-[-70px] md:bottom-10",
-              size: "w-20 sm:w-32 md:w-32 lg:w-40 p-1 sm:p-3 md:p-1 lg:p-3",
+              position: "bottom-6 left-[-30px] sm:left-[-70px]  md:bottom-10",
+              size: "w-24 sm:w-32 md:w-32 lg:w-40  p-1 sm:p-3 md:p-1 lg:p-3",
             },
           ].map(({ icon, value, label, position, size }, i) => (
             <div
               key={i}
-              className={`absolute ${position} bg-white shadow-md rounded-md ${size} flex items-center space-x-2 text-center`}
+              className={`absolute ${position} bg-white shadow-md rounded-md ${size} flex items-center justify-center text-center`}
             >
               {icon}
-              <div>
-                <p className="text-[8px] sm:text-sm md:text-base font-semibold text-gray-800">
+              <div className="flex flex-col justify-center items-center">
+                <p className="text-[13px] sm:text-base md:text-base font-semibold text-gray-800">
                   {value}
                 </p>
-                <p className="text-[7px] sm:text-xs md:text-sm text-gray-500">
+                <p className="text-[13px] sm:text- md:text-sm text-gray-500">
                   {label}
                 </p>
               </div>
             </div>
           ))}
 
-          {/* Небольшая цитата */}
-          <div className="absolute top-8 left-[-10px] sm:left-[-70px] md:left-[-90px] bg-white shadow-md rounded-md p-1 w-20 sm:w-36 md:w-25 lg:w-40 text-center md:top-16 md:p-0 lg:p-2">
-            <p className="text-[7px] sm:text-sm md:text-[13px] lg:text-[20px] italic text-gray-600">
+          {/* Цитата */}
+          <div className="absolute top-8 left-[-10px] sm:left-[-70px] md:left-[-90px] bg-white shadow-md rounded-md p-1 w-24 sm:w-36 md:w-25 lg:w-40 text-center md:top-16 md:p-0 lg:p-2">
+            <p className="text-[11px] sm:text-sm md:text-[13px] lg:text-[20px] italic text-gray-600">
               “Қорқынышты жеңудің жолы — оны түсіну”
             </p>
           </div>
@@ -79,14 +76,14 @@ const HeroEduStyle = () => {
             {["Еркін сөйле", "Еркін ойла", "Еркін бол!"].map((text, i) => (
               <span
                 key={i}
-                className="block text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-green-200 via-blue-200 to-purple-300"
+                className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-green-200 via-blue-200 to-purple-300 tracking-wide leading-tight"
               >
                 {text}
               </span>
             ))}
           </h1>
 
-          <p className="text-base md:text-lg text-gray-100 max-w-xl leading-relaxed mx-auto md:mx-0">
+          <p className="text-lg sm:text-base md:text-lg text-gray-100 max-w-xl leading-relaxed mx-auto md:mx-0 mt-6">
             Біздің курстарымыз сізге дебат әлемінде сенімді сөйлеу мен
             критикалық ойлау дағдыларын үйретеді.
             <br />

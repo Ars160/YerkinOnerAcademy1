@@ -33,7 +33,7 @@ function Header() {
         isScrolled ? "py-3 bg-white/95 shadow-sm" : "py-4 bg-indigo-950/90"
       )}
     >
-      <div className="container mx-auto px-4 sm:px-12 md:px-2 lg:px-16 flex items-center justify-between">
+      <div className="container mx-auto px-4 sm:px-12 md:px-2 lg:px-4 xl:px-5 flex items-center justify-between">
         {/* Логотип */}
         <a href="/" className="text-xl md:text-2xl font-bold">
           <span className={clsx(isScrolled ? "text-blue-900" : "text-white")}>
