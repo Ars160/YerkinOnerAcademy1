@@ -1,7 +1,7 @@
 import React from "react";
-import mathImg from "../assets/images/banner.png";
-import yershan from "../assets/images/IMG_2381.png";
-import chemistryImg from "../assets/images/kurator.png";
+import mathImg from "../assets/images/debate.jpg";
+import yershan from "../assets/images/orator.jpg";
+import chemistryImg from "../assets/images/acter.jpg";
 
 
 const Courses = () => {

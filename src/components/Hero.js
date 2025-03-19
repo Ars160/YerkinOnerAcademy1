@@ -1,6 +1,6 @@
 import React from "react";
 import banner from "../assets/images/banner.png";
-import { FiAward, FiUsers } from "react-icons/fi";
+import { FiAward } from "react-icons/fi";
 
 const HeroEduStyle = () => {
   return (
