@@ -84,7 +84,7 @@ const HeroEduStyle = () => {
           </h1>
 
           <p className="text-lg sm:text-base md:text-lg text-gray-100 max-w-xl leading-relaxed mx-auto md:mx-0 mt-6">
-            Біздің курстарымыз сізге дебат әлемінде сенімді сөйлеу мен
+            Бұл курс сізге дебат әлемінде сенімді сөйлеу мен
             критикалық ойлау дағдыларын үйретеді.
             <br />
             <span className="mt-4 block">
