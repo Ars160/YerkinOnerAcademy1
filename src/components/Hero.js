@@ -42,7 +42,7 @@ const HeroEduStyle = () => {
             {
               value: "+7000",
               label: "адамдардың пікірі",
-              position: "bottom-6 left-[-30px] sm:left-[-70px]  md:bottom-10",
+              position: "bottom-6 left-[-20px] sm:left-[-70px]  md:bottom-10",
               size: "w-24 sm:w-32 md:w-32 lg:w-40  p-1 sm:p-3 md:p-1 lg:p-3",
             },
           ].map(({ icon, value, label, position, size }, i) => (
@@ -76,7 +76,7 @@ const HeroEduStyle = () => {
             {["Еркін сөйле", "Еркін ойла", "Еркін бол!"].map((text, i) => (
               <span
                 key={i}
-                className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-green-200 via-blue-200 to-purple-300 tracking-wide leading-tight"
+                className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-green-200 via-blue-200 to-purple-300 tracking-wide leading-tight"
               >
                 {text}
               </span>
